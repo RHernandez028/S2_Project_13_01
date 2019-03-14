@@ -34,6 +34,18 @@
 
 */
 
+window.onload = init;
+
+function init() {
+      var stars = document.querySelectorAll("span#stars img");
+      console.log(stars);
+
+      for (var i = 0; i < stars.length; i++) {
+            stars[i].style.cursor = "pointer";
+            stars[i].addEventListener("mouseenter", lightstars);
+      }
+      
+}
 
 
   
