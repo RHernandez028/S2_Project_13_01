@@ -36,16 +36,42 @@
 
 window.onload = init;
 
+//define event listners
 function init() {
       var stars = document.querySelectorAll("span#stars img");
-      console.log(stars);
 
       for (var i = 0; i < stars.length; i++) {
             stars[i].style.cursor = "pointer";
-            stars[i].addEventListener("mouseenter", lightstars);
-      }
-      
+            stars[i].addEventListener("mouseenter", lightStars);
+      }    
+      //document.getElementById("comment").addEventListener("keyup", updateCount);
 }
+
+//color star when the user moves the pointer over star image
+function lightStars(e) {
+      var starNumber = e.target.alt;
+      var stars = document.querySelectorAll("span#stars img");
+
+      for (var i = 0; i < starNumber; i++) {
+            stars[i].src = "bw_star2.png";
+      }
+
+      // displays the number of starts the user selects
+      for (var i = starNumber; i < 5; i++) {
+            stars[i].src = "bw_star.png";       
+      } 
+      document.getElementById("rating").value = starNumber + " stars";
+     
+      //unlights the star after the images pointer moves off the star image
+     
+      document.addEventListener("mouseleave", turnOffStars);
+     
+      //
+      document.addEventListener("mouseleave", function () {
+            document.removeEventListener("")
+      });
+}
+
 
 
   
