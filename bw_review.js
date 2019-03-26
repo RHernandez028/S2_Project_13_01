@@ -5,8 +5,8 @@
    Tutorial 11
    Case Problem 1
 
-   Author: 
-   Date:   
+   Author: Gabriel Hernandez
+   Date: 3/25/19  
    
    Filename: bw_review.js
 	
@@ -99,7 +99,7 @@ function updateCount() {
             wordCount.style.backgroundColor = "red";
       } else {
             wordCount.style.color = "black";
-            wordCount.style.baclgroundColor = "white";
+            wordCount.style.backgroundColor = "white";
       }
 }
 
